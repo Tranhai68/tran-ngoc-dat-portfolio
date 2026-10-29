@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRẦN NGỌC ĐẠT — Trưởng Phòng Kinh Doanh | Digital Marketing | Fashion Retail</title>
+  <meta name="description" content="Portfolio & Hồ sơ năng lực của Trần Ngọc Đạt - Trưởng Phòng Kinh Doanh với 7 năm kinh nghiệm thời trang nữ, 5 năm Digital Marketing, tăng trưởng doanh thu x10 (15 tỷ lên 150 tỷ VNĐ).">
+  
+  <!-- Google Fonts: Inter Tight & Archivo (Variable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter+Tight:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & SCALE VARIABLES
+       Reference Artboard: 1440px
+       u = min(100vw / 1440, 1.333px)
+       Phone (<= 760px): u = 100vw / 390
+       ========================================================================== */
+    :root {
+      --u: min(100vw / 1440, 1.333px);
+      --bg-paper: #dadada;
+      --ink-hero: #111111;
+      --bg-dark: #000000;
+      --text-light: #f4f4f4;
+      --text-muted: #6f6f6f;
+      --text-dim: #8e8e8e;
+      --border-hairline: rgba(255, 255, 255, 0.16);
+      --border-panel: rgba(255, 255, 255, 0.28);
+      --glass-bg: rgba(18, 18, 18, 0.72);
+      --glass-frost: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.18);
+      --font-display: 'Archivo', sans-serif;
+      --font-ui: 'Inter Tight', sans-serif;
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --u: calc(100vw / 390);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: var(--font-ui);
+    }
+
+    body {
+      overflow-x: hidden;
+      width: 100%;
+      background-color: var(--bg-dark);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    /* ==========================================================================
+       SECTION 1: HERO (1440 × 938u)
+       Strict Monochrome Editorial Aesthetic
+       ========================================================================== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: calc(938 * var(--u));
+      background-color: var(--bg-paper);
+      color: var(--ink-hero);
+      overflow: hidden;
+    }
+
+    /* Hero Background Image: Asian man seen from behind in dark technical jacket */
+    .hero-photo-wrap {
+      position: absolute;
+      left: calc(338 * var(--u));
+      top: calc(-86 * var(--u));
+      width: calc(764 * var(--u));
+      height: calc(1024 * var(--u));
+      pointer-events: none;
+      z-index: 1;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: grayscale(100%) contrast(106%);
+    }
+
+    /* Top Navigation Pill */
+    .nav-pill-container {
+      position: absolute;
+      left: calc(57 * var(--u));
+      top: calc(61 * var(--u));
+      height: calc(48 * var(--u));
+      background: #ffffff;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      padding: calc(4 * var(--u));
+      z-index: 20;
+      box-shadow: 0 calc(4 * var(--u)) calc(16 * var(--u)) rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-slider {
+      position: absolute;
+      top: calc(4 * var(--u));
+      height: calc(40 * var(--u));
+      background: #000000;
+      border-radius: 9999px;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .nav-link {
+      position: relative;
+      z-index: 2;
+      padding: 0 calc(18 * var(--u));
+      font-size: calc(13.5 * var(--u));
+      font-weight: 500;
+      color: #333333;
+      text-transform: capitalize;
+      letter-spacing: -0.01em;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      height: calc(40 * var(--u));
+      cursor: pointer;
+    }
+
+    .nav-link.active,
+    .nav-link.hovered {
+      color: #ffffff;
+    }
+
+    /* Top Right Header Block at (1038, 70) and (1237, 63) */
+    .hero-meta-date {
+      position: absolute;
+      left: calc(1038 * var(--u));
+      top: calc(70 * var(--u));
+      font-family: var(--font-ui);
+      font-size: calc(13 * var(--u));
+      line-height: 1.35;
+      color: #444444;
+      letter-spacing: -0.01em;
+      z-index: 20;
+    }
+
+    .hero-meta-date span {
+      display: block;
+      font-weight: 600;
+      color: #111111;
+    }
+
+    .btn-contact-top {
+      position: absolute;
+      left: calc(1237 * var(--u));
+      top: calc(63 * var(--u));
+      width: calc(144 * var(--u));
+      height: calc(46 * var(--u));
+      background: #111111;
+      color: #ffffff;
+      border-radius: 9999px;
+      font-size: calc(13.5 * var(--u));
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: calc(8 * var(--u));
+      letter-spacing: -0.01em;
+      z-index: 20;
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-contact-top:hover {
+      transform: translateY(-1px);
+      background: #000000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Main Big Editorial Title (Archival display) */
+    .hero-title-group {
+      position: absolute;
+      left: calc(57 * var(--u));
+      top: calc(246 * var(--u));
+      z-index: 10;
+    }
+
+    .hero-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: calc(16 * var(--u));
+    }
+
+    .hero-title-text {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 104, 'wght' 640;
+      font-size: calc(90 * var(--u));
+      line-height: 0.86;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      color: var(--ink-hero);
+      display: block;
+      overflow: hidden;
+    }
+
+    .hero-title-text span {
+      display: block;
+      transform: translateY(0);
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-title-subscript {
+      font-family: var(--font-ui);
+      font-size: calc(21 * var(--u));
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #333333;
+      transform: translateY(calc(-40 * var(--u)));
+    }
+
+    /* Hero Bio / About Block */
+    .hero-about-group {
+      position: absolute;
+      left: calc(57 * var(--u));
+      top: calc(458 * var(--u));
+      width: calc(340 * var(--u));
+      z-index: 10;
+    }
+
+    .hero-about-tag {
+      font-family: var(--font-ui);
+      font-size: calc(13 * var(--u));
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #333333;
+      margin-bottom: calc(12 * var(--u));
+      display: flex;
+      align-items: center;
+      gap: calc(6 * var(--u));
+    }
+
+    .hero-about-tag::before {
+      content: "●";
+      font-size: calc(9 * var(--u));
+      color: #000;
+    }
+
+    .hero-about-desc {
+      font-size: calc(14 * var(--u));
+      line-height: 1.45;
+      color: #333333;
+      font-weight: 450;
+      margin-bottom: calc(26 * var(--u));
+    }
+
+    .btn-hero-action {
+      height: calc(46 * var(--u));
+      padding: 0 calc(24 * var(--u));
+      background: #111111;
+      color: #ffffff;
+      border-radius: 9999px;
+      font-size: calc(13.5 * var(--u));
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: calc(8 * var(--u));
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-hero-action:hover {
+      transform: translateY(-1px);
+      background: #000000;
+    }
+
+    /* Stats Frame (Bottom Left: 341 × 208u) */
+    .hero-stats-frame {
+      position: absolute;
+      left: calc(57 * var(--u));
+      top: calc(693 * var(--u));
+      width: calc(341 * var(--u));
+      height: calc(208 * var(--u));
+      background: #cdcdcd;
+      border-radius: calc(8 * var(--u));
+      display: flex;
+      gap: calc(8 * var(--u));
+      padding: calc(6 * var(--u));
+      z-index: 10;
+      box-shadow: 0 calc(6 * var(--u)) calc(24 * var(--u)) rgba(0, 0, 0, 0.06);
+    }
+
+    /* Dark Card inside Stats Frame */
+    .stat-card-dark {
+      flex: 1;
+      background: #181818;
+      border-radius: calc(6 * var(--u));
+      color: #ffffff;
+      padding: calc(14 * var(--u)) calc(12 * var(--u));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stat-card-dark-header .num {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 104, 'wght' 700;
+      font-size: calc(25 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .stat-card-dark-header .lbl {
+      font-size: calc(10.5 * var(--u));
+      color: #999999;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-top: calc(4 * var(--u));
+    }
+
+    /* 6 Partner / Channel micro badges */
+    .partner-marks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: calc(6 * var(--u)) calc(4 * var(--u));
+      margin: calc(8 * var(--u)) 0;
+    }
+
+    .partner-mark-item {
+      display: flex;
+      align-items: center;
+      gap: calc(3 * var(--u));
+      font-size: calc(8.5 * var(--u));
+      color: #aaaaaa;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .partner-mark-item svg {
+      width: calc(8 * var(--u));
+      height: calc(8 * var(--u));
+      fill: currentColor;
+    }
+
+    .btn-stat-call {
+      height: calc(28 * var(--u));
+      background: #ffffff;
+      color: #111111;
+      border-radius: calc(4 * var(--u));
+      font-size: calc(10.5 * var(--u));
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: calc(4 * var(--u));
+      transition: background 0.2s;
+    }
+
+    .btn-stat-call:hover {
+      background: #f0f0f0;
+    }
+
+    /* Photo Card inside Stats Frame */
+    .stat-card-photo {
+      flex: 1;
+      position: relative;
+      border-radius: calc(6 * var(--u));
+      overflow: hidden;
+      background: #000;
+      color: #ffffff;
+      padding: calc(12 * var(--u));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stat-card-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.72;
+      filter: grayscale(100%);
+    }
+
+    .stat-card-photo-top {
+      position: relative;
+      z-index: 2;
+      font-size: calc(10 * var(--u));
+      color: #cccccc;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: calc(4 * var(--u));
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .stat-card-photo-bottom {
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat-card-photo-bottom .num {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 104, 'wght' 700;
+      font-size: calc(23 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .stat-card-photo-bottom .desc {
+      font-size: calc(9.5 * var(--u));
+      line-height: 1.25;
+      color: #cccccc;
+      margin-top: calc(4 * var(--u));
+    }
+
+    /* Center Brand Plate (Across Man's Back at 532, 444) */
+    .hero-brand-plate {
+      position: absolute;
+      left: calc(532 * var(--u));
+      top: calc(444 * var(--u));
+      width: calc(364 * var(--u));
+      height: calc(73 * var(--u));
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: calc(6 * var(--u));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 calc(24 * var(--u));
+      color: #ffffff;
+      z-index: 15;
+      box-shadow: 0 calc(12 * var(--u)) calc(32 * var(--u)) rgba(0, 0, 0, 0.25);
+    }
+
+    .brand-plate-left {
+      display: flex;
+      align-items: center;
+      gap: calc(14 * var(--u));
+    }
+
+    .brand-plate-mark {
+      width: calc(24 * var(--u));
+      height: calc(24 * var(--u));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-plate-name {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 112, 'wght' 700;
+      font-size: calc(25 * var(--u));
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .brand-plate-sub {
+      font-size: calc(9.5 * var(--u));
+      color: #aaaaaa;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: calc(3 * var(--u));
+    }
+
+    .brand-plate-icon {
+      display: flex;
+      flex-direction: column;
+      gap: calc(5 * var(--u));
+      width: calc(22 * var(--u));
+    }
+
+    .brand-plate-icon span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 1px;
+    }
+
+    /* Wordmark row across jacket at y 864 */
+    .hero-jacket-logos {
+      position: absolute;
+      left: calc(360 * var(--u));
+      top: calc(864 * var(--u));
+      width: calc(720 * var(--u));
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.72);
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 100, 'wght' 600;
+      font-size: calc(14 * var(--u));
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .hero-jacket-logos span {
+      position: relative;
+    }
+
+    /* Right Column Elements */
+    .hero-pill-growth {
+      position: absolute;
+      left: calc(1216 * var(--u));
+      top: calc(258 * var(--u));
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 9999px;
+      padding: calc(8 * var(--u)) calc(16 * var(--u));
+      display: flex;
+      align-items: center;
+      gap: calc(8 * var(--u));
+      font-size: calc(13 * var(--u));
+      font-weight: 600;
+      color: #111111;
+      z-index: 10;
+      box-shadow: 0 calc(4 * var(--u)) calc(12 * var(--u)) rgba(0, 0, 0, 0.05);
+    }
+
+    .pill-check-disc {
+      width: calc(16 * var(--u));
+      height: calc(16 * var(--u));
+      border-radius: 50%;
+      background: #111111;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10 * var(--u));
+    }
+
+    .hero-available-status {
+      position: absolute;
+      right: calc(57 * var(--u));
+      top: calc(442 * var(--u));
+      text-align: right;
+      font-size: calc(13.5 * var(--u));
+      color: #444444;
+      line-height: 1.4;
+      z-index: 10;
+    }
+
+    .hero-available-status span {
+      display: block;
+      color: #111111;
+      font-weight: 600;
+    }
+
+    .hero-available-status .dot-live {
+      display: inline-block;
+      width: calc(7 * var(--u));
+      height: calc(7 * var(--u));
+      background: #10b981;
+      border-radius: 50%;
+      margin-right: calc(4 * var(--u));
+      box-shadow: 0 0 calc(8 * var(--u)) rgba(16, 185, 129, 0.6);
+    }
+
+    /* Out Now / Featured Card on Right */
+    .hero-feature-card {
+      position: absolute;
+      right: calc(57 * var(--u));
+      top: calc(518 * var(--u));
+      width: calc(334 * var(--u));
+      z-index: 10;
+    }
+
+    .hero-feature-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: calc(10 * var(--u));
+    }
+
+    .feature-tagline {
+      font-size: calc(11 * var(--u));
+      color: #666666;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .feature-name {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 100, 'wght' 700;
+      font-size: calc(18 * var(--u));
+      color: #111111;
+      letter-spacing: -0.02em;
+    }
+
+    .feature-badge-year {
+      font-size: calc(11 * var(--u));
+      background: #111111;
+      color: #ffffff;
+      padding: calc(3 * var(--u)) calc(8 * var(--u));
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+
+    .feature-image-box {
+      position: relative;
+      width: 100%;
+      height: calc(196 * var(--u));
+      border-radius: calc(8 * var(--u));
+      overflow: hidden;
+      background: #000;
+      cursor: pointer;
+    }
+
+    .feature-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+      filter: grayscale(100%) contrast(110%);
+    }
+
+    .feature-image-box:hover img {
+      transform: scale(1.15);
+      filter: grayscale(80%) contrast(115%);
+    }
+
+    .feature-arrow-btn {
+      position: absolute;
+      right: calc(18 * var(--u));
+      bottom: calc(18 * var(--u));
+      width: calc(44 * var(--u));
+      height: calc(44 * var(--u));
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111111;
+      font-size: calc(18 * var(--u));
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease;
+    }
+
+    .feature-image-box:hover .feature-arrow-btn {
+      transform: rotate(45deg) scale(1.06);
+      background: #ffffff;
+    }
+
+    .feature-progress-track {
+      position: absolute;
+      left: calc(18 * var(--u));
+      bottom: calc(22 * var(--u));
+      width: calc(120 * var(--u));
+      height: 2px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 1px;
+      overflow: hidden;
+    }
+
+    .feature-progress-fill {
+      height: 100%;
+      width: 65%;
+      background: #ffffff;
+      border-radius: 1px;
+      animation: progressPulse 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes progressPulse {
+      0% { width: 40%; }
+      100% { width: 90%; }
+    }
+
+    /* ==========================================================================
+       SECTION 2: BLACK BAR (111u)
+       EST 2019 · SCROLL DOWN · LIVE IN DETAILS
+       ========================================================================== */
+    .bar-divider {
+      width: 100%;
+      height: calc(111 * var(--u));
+      background-color: var(--bg-dark);
+      border-bottom: 1px solid var(--border-hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 calc(57 * var(--u));
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 100, 'wght' 600;
+      font-size: calc(14 * var(--u));
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      position: relative;
+      z-index: 10;
+    }
+
+    .bar-item-left {
+      color: #ffffff;
+    }
+
+    .bar-item-left span {
+      color: var(--text-muted);
+      margin-left: calc(6 * var(--u));
+    }
+
+    .bar-item-center {
+      display: flex;
+      align-items: center;
+      gap: calc(10 * var(--u));
+      color: #ffffff;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    .bar-item-center:hover {
+      opacity: 0.8;
+    }
+
+    .bar-scroll-disc {
+      width: calc(24 * var(--u));
+      height: calc(24 * var(--u));
+      border-radius: 50%;
+      background: #ffffff;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(12 * var(--u));
+      animation: bounceDown 2s infinite ease-in-out;
+    }
+
+    @keyframes bounceDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(3px); }
+    }
+
+    .bar-item-right {
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       SECTION 3: MANIFESTO / STATEMENT SECTION
+       Words Fill from Grey to Pure White on Scroll
+       ========================================================================== */
+    .statement-section {
+      width: 100%;
+      background-color: var(--bg-dark);
+      padding: calc(170 * var(--u)) calc(57 * var(--u)) calc(230 * var(--u)) calc(57 * var(--u));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .statement-container {
+      width: 100%;
+      max-width: calc(960 * var(--u));
+      margin: 0 auto;
+    }
+
+    .statement-quote-badge {
+      display: inline-block;
+      font-size: calc(12 * var(--u));
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888888;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: calc(6 * var(--u)) calc(16 * var(--u));
+      border-radius: 9999px;
+      margin-bottom: calc(42 * var(--u));
+    }
+
+    .statement-paragraph {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 102, 'wght' 500;
+      font-size: calc(50 * var(--u));
+      line-height: 1.32;
+      letter-spacing: -0.028em;
+      margin-bottom: calc(120 * var(--u));
+    }
+
+    /* Each word span fills with smooth color calculation */
+    .word {
+      display: inline-block;
+      color: var(--text-muted);
+      transition: color 0.15s ease, opacity 0.15s ease;
+      white-space: pre-wrap;
+    }
+
+    .statement-subline {
+      max-width: calc(720 * var(--u));
+      margin: 0 auto;
+      font-size: calc(23 * var(--u));
+      line-height: 1.5;
+      font-weight: 400;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .statement-subline em {
+      font-style: normal;
+      color: var(--text-muted);
+      display: block;
+      margin-top: calc(8 * var(--u));
+      font-size: calc(19 * var(--u));
+    }
+
+    /* ==========================================================================
+       SECTION 4: TRUST PANEL / PROVEN TRACK RECORD
+       1302 × 429u Bordered Container with Stat Cards
+       ========================================================================== */
+    .trust-section {
+      width: 100%;
+      background-color: var(--bg-dark);
+      padding: 0 calc(57 * var(--u)) calc(150 * var(--u)) calc(57 * var(--u));
+      display: flex;
+      justify-content: center;
+    }
+
+    .trust-panel {
+      width: 100%;
+      max-width: calc(1302 * var(--u));
+      min-height: calc(429 * var(--u));
+      border: 1px solid var(--border-panel);
+      border-radius: calc(14 * var(--u));
+      padding: calc(52 * var(--u));
+      display: grid;
+      grid-template-columns: calc(380 * var(--u)) 1fr;
+      gap: calc(42 * var(--u));
+      background: rgba(14, 14, 14, 0.5);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 calc(20 * var(--u)) calc(60 * var(--u)) rgba(0, 0, 0, 0.4);
+    }
+
+    /* Left Side: Heading with Overlapping Frosted Glass Tiles */
+    .trust-left-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      z-index: 5;
+    }
+
+    .trust-heading-wrap {
+      position: relative;
+    }
+
+    .trust-title {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 102, 'wght' 500;
+      font-size: calc(54 * var(--u));
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: calc(24 * var(--u));
+    }
+
+    /* Overlapping Frosted Glass Icon Tile 1 (Asterisk Top Right) */
+    .glass-tile-asterisk {
+      position: absolute;
+      left: calc(240 * var(--u));
+      top: calc(-12 * var(--u));
+      width: calc(88 * var(--u));
+      height: calc(88 * var(--u));
+      border-radius: calc(12 * var(--u));
+      background: var(--glass-frost);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(36 * var(--u));
+      color: #ffffff;
+      box-shadow: 0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(0, 0, 0, 0.3);
+      z-index: 6;
+      transition: transform 0.3s ease;
+    }
+
+    .glass-tile-asterisk:hover {
+      transform: rotate(30deg) scale(1.05);
+    }
+
+    /* Overlapping Frosted Glass Icon Tile 2 (Four Dots over word "Doanh Số") */
+    .glass-tile-dots {
+      position: absolute;
+      left: calc(80 * var(--u));
+      top: calc(125 * var(--u));
+      width: calc(88 * var(--u));
+      height: calc(88 * var(--u));
+      border-radius: calc(12 * var(--u));
+      background: var(--glass-frost);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: calc(8 * var(--u));
+      padding: calc(22 * var(--u));
+      box-shadow: 0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(0, 0, 0, 0.3);
+      z-index: 6;
+      transition: transform 0.3s ease;
+    }
+
+    .glass-tile-dots:hover {
+      transform: scale(1.08);
+    }
+
+    .glass-dot {
+      background: #ffffff;
+      border-radius: 50%;
+    }
+
+    .trust-desc {
+      font-size: calc(14.5 * var(--u));
+      line-height: 1.5;
+      color: #a0a0a0;
+      max-width: calc(340 * var(--u));
+      margin-top: calc(14 * var(--u));
+    }
+
+    /* Right Side: Stat Cards Row */
+    .trust-cards-row {
+      display: flex;
+      align-items: stretch;
+      gap: calc(18 * var(--u));
+      position: relative;
+    }
+
+    /* Card 1: Avatar Card (Light Grey #d6d6d6, 293u) */
+    .trust-card-avatar {
+      width: calc(293 * var(--u));
+      height: calc(326 * var(--u));
+      background: #d6d6d6;
+      color: #111111;
+      border-radius: calc(8 * var(--u));
+      padding: calc(24 * var(--u));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.3s ease;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .trust-card-avatar:hover {
+      transform: translateY(calc(-6 * var(--u)));
+      box-shadow: 0 calc(12 * var(--u)) calc(30 * var(--u)) rgba(255, 255, 255, 0.08);
+    }
+
+    /* 4 × 2 Grid of 8 Round Headshots (48u) */
+    .avatars-grid-8 {
+      display: grid;
+      grid-template-columns: repeat(4, calc(48 * var(--u)));
+      grid-gap: calc(10 * var(--u));
+    }
+
+    .avatar-item {
+      width: calc(48 * var(--u));
+      height: calc(48 * var(--u));
+      border-radius: 50%;
+      overflow: hidden;
+      background: #222;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .avatar-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+    }
+
+    .avatar-item:hover {
+      transform: scale(1.15);
+      z-index: 2;
+    }
+
+    .avatar-card-stat {
+      margin-top: auto;
+    }
+
+    .avatar-card-stat .big-num {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 104, 'wght' 700;
+      font-size: calc(43 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: #111111;
+    }
+
+    .avatar-card-stat .stat-lbl {
+      font-size: calc(13 * var(--u));
+      font-weight: 600;
+      color: #444444;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-top: calc(6 * var(--u));
+    }
+
+    /* Card 2: Awards & Highlights Card (#262626, 298u) */
+    .trust-card-awards {
+      width: calc(298 * var(--u));
+      height: calc(326 * var(--u));
+      background: #262626;
+      color: #f4f4f4;
+      border-radius: calc(8 * var(--u));
+      padding: calc(24 * var(--u));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.3s ease;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .trust-card-awards:hover {
+      transform: translateY(calc(-6 * var(--u)));
+      box-shadow: 0 calc(12 * var(--u)) calc(30 * var(--u)) rgba(0, 0, 0, 0.5);
+    }
+
+    .awards-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .awards-big-num {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 104, 'wght' 700;
+      font-size: calc(43 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .awards-sub-lbl {
+      font-size: calc(12 * var(--u));
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-top: calc(4 * var(--u));
+    }
+
+    /* Laurel Badge SVG */
+    .laurel-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: calc(6 * var(--u));
+    }
+
+    .laurel-text {
+      text-align: center;
+      font-size: calc(8.5 * var(--u));
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: 0.06em;
+      color: #d4af37;
+      text-transform: uppercase;
+    }
+
+    .awards-card-footer {
+      font-size: calc(13 * var(--u));
+      line-height: 1.45;
+      color: #a8a8a8;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: calc(14 * var(--u));
+    }
+
+    /* Card 3: Portrait Card (Monochrome fashion profile, 200u, cut off by panel edge) */
+    .trust-card-portrait {
+      width: calc(200 * var(--u));
+      height: calc(326 * var(--u));
+      border-radius: calc(8 * var(--u));
+      overflow: hidden;
+      position: relative;
+      background: #111;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .trust-card-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(100%);
+      transition: transform 0.5s ease;
+    }
+
+    .trust-card-portrait:hover img {
+      transform: scale(1.08);
+    }
+
+    .portrait-badge {
+      position: absolute;
+      bottom: calc(14 * var(--u));
+      left: calc(14 * var(--u));
+      right: calc(14 * var(--u));
+      padding: calc(6 * var(--u)) calc(10 * var(--u));
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: calc(4 * var(--u));
+      font-size: calc(10 * var(--u));
+      color: #ffffff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+
+    /* ==========================================================================
+       SECTION 5: DETAILED DOSSIER / FULL CV BREAKDOWN (INTERACTIVE DRAWER)
+       Deep Dive: Dezus Experience, 5 Core Competencies, Career Goals, Contact
+       ========================================================================== */
+    .dossier-section {
+      width: 100%;
+      max-width: calc(1302 * var(--u));
+      margin: 0 auto calc(120 * var(--u)) auto;
+      padding: 0 calc(57 * var(--u));
+    }
+
+    .dossier-card {
+      background: #0d0d0d;
+      border: 1px solid var(--border-hairline);
+      border-radius: calc(14 * var(--u));
+      padding: calc(48 * var(--u));
+      position: relative;
+    }
+
+    .dossier-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--border-hairline);
+      padding-bottom: calc(28 * var(--u));
+      margin-bottom: calc(36 * var(--u));
+    }
+
+    .dossier-title-main {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 102, 'wght' 600;
+      font-size: calc(36 * var(--u));
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .dossier-subtitle {
+      font-size: calc(14 * var(--u));
+      color: var(--text-dim);
+      margin-top: calc(6 * var(--u));
+    }
+
+    .dossier-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: calc(48 * var(--u));
+    }
+
+    /* Experience Column */
+    .dossier-col-title {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 100, 'wght' 700;
+      font-size: calc(16 * var(--u));
+      color: #ffffff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: calc(20 * var(--u));
+      display: flex;
+      align-items: center;
+      gap: calc(8 * var(--u));
+    }
+
+    .dossier-col-title::before {
+      content: "";
+      width: calc(8 * var(--u));
+      height: calc(8 * var(--u));
+      background: #ffffff;
+      border-radius: 50%;
+    }
+
+    .experience-card-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: calc(8 * var(--u));
+      padding: calc(24 * var(--u));
+      margin-bottom: calc(20 * var(--u));
+    }
+
+    .exp-role-title {
+      font-family: var(--font-display);
+      font-variation-settings: 'wdth' 104, 'wght' 700;
+      font-size: calc(20 * var(--u));
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .exp-company-time {
+      display: flex;
+      justify-content: space-between;
+      color: #999999;
+      font-size: calc(13 * var(--u));
+      margin-top: calc(4 * var(--u));
+      margin-bottom: calc(16 * var(--u));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: calc(10 * var(--u));
+    }
+
+    .exp-bullets {
+      list-style: none;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: calc(20 * var(--u));
+      font-size: calc(13.5 * var(--u));
+      line-height: 1.6;
+      color: #cccccc;
+      margin-bottom: calc(10 * var(--u));
+    }
+
+    .exp-bullets li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #888888;
+    }
+
+    /* Core Competencies Badges */
+    .skills-badges-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: calc(12 * var(--u));
+    }
+
+    .skill-badge-row {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: calc(6 * var(--u));
+      padding: calc(14 * var(--u)) calc(18 * var(--u));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .skill-badge-row:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .skill-name {
+      font-weight: 600;
+      font-size: calc(14 * var(--u));
+      color: #ffffff;
+    }
+
+    .skill-tag {
+      font-size: calc(11 * var(--u));
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Career Vision Block */
+    .career-vision-box {
+      margin-top: calc(28 * var(--u));
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+      border: 1px dashed rgba(255, 255, 255, 0.16);
+      border-radius: calc(8 * var(--u));
+      padding: calc(20 * var(--u));
+    }
+
+    .vision-title {
+      font-size: calc(12 * var(--u));
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #999999;
+      margin-bottom: calc(6 * var(--u));
+    }
+
+    .vision-desc {
+      font-size: calc(14 * var(--u));
+      line-height: 1.55;
+      color: #e0e0e0;
+    }
+
+    /* Footer & Action Panel */
+    .footer-bar {
+      border-top: 1px solid var(--border-hairline);
+      padding: calc(40 * var(--u)) calc(57 * var(--u));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: calc(13 * var(--u));
+      color: var(--text-dim);
+    }
+
+    .footer-contact-actions {
+      display: flex;
+      gap: calc(14 * var(--u));
+      align-items: center;
+    }
+
+    .btn-footer-pill {
+      padding: calc(8 * var(--u)) calc(18 * var(--u));
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 9999px;
+      color: #ffffff;
+      font-size: calc(12.5 * var(--u));
+      font-weight: 500;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: calc(6 * var(--u));
+    }
+
+    .btn-footer-pill:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    /* Toast Notification for Copy */
+    .toast-msg {
+      position: fixed;
+      bottom: calc(30 * var(--u));
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #ffffff;
+      color: #111111;
+      font-size: calc(13 * var(--u));
+      font-weight: 600;
+      padding: calc(10 * var(--u)) calc(22 * var(--u));
+      border-radius: 9999px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      z-index: 1000;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE PHONE LAYOUT (≤ 760px)
+       Single Column Editorial Flow
+       ========================================================================== */
+    @media (max-width: 760px) {
+      .hero {
+        height: auto;
+        min-height: calc(1150 * var(--u));
+        padding: calc(20 * var(--u));
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-pill-container {
+        position: static;
+        margin-bottom: calc(20 * var(--u));
+        width: 100%;
+        justify-content: space-around;
+        height: calc(44 * var(--u));
+      }
+
+      .nav-link {
+        padding: 0 calc(10 * var(--u));
+        font-size: calc(12 * var(--u));
+      }
+
+      .hero-top-right {
+        position: static;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: calc(24 * var(--u));
+      }
+
+      .hero-meta-date {
+        text-align: left;
+        font-size: calc(12 * var(--u));
+      }
+
+      .btn-contact-top {
+        height: calc(40 * var(--u));
+        padding: 0 calc(16 * var(--u));
+        font-size: calc(12.5 * var(--u));
+      }
+
+      .hero-title-group {
+        position: static;
+        margin-bottom: calc(20 * var(--u));
+      }
+
+      .hero-title-text {
+        font-size: calc(64 * var(--u));
+        line-height: 0.9;
+      }
+
+      .hero-title-subscript {
+        font-size: calc(16 * var(--u));
+        transform: translateY(calc(-20 * var(--u)));
+      }
+
+      .hero-about-group {
+        position: static;
+        width: 100%;
+        margin-bottom: calc(28 * var(--u));
+      }
+
+      .hero-photo-wrap {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: calc(460 * var(--u));
+        margin: calc(10 * var(--u)) 0 calc(30 * var(--u)) 0;
+        -webkit-mask-image: none;
+        mask-image: none;
+        border-radius: calc(12 * var(--u));
+        overflow: hidden;
+      }
+
+      .hero-brand-plate {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: calc(64 * var(--u));
+      }
+
+      .hero-jacket-logos {
+        position: absolute;
+        bottom: calc(16 * var(--u));
+        left: 0;
+        width: 100%;
+        font-size: calc(10 * var(--u));
+      }
+
+      .hero-pill-growth {
+        position: static;
+        display: inline-flex;
+        margin-bottom: calc(16 * var(--u));
+        align-self: flex-start;
+      }
+
+      .hero-available-status {
+        position: static;
+        text-align: left;
+        margin-bottom: calc(24 * var(--u));
+      }
+
+      .hero-stats-frame {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: calc(24 * var(--u));
+      }
+
+      .stat-card-dark, .stat-card-photo {
+        min-height: calc(140 * var(--u));
+      }
+
+      .hero-feature-card {
+        position: static;
+        width: 100%;
+      }
+
+      .bar-divider {
+        height: auto;
+        padding: calc(24 * var(--u)) calc(20 * var(--u));
+        flex-direction: column;
+        gap: calc(12 * var(--u));
+        text-align: center;
+        font-size: calc(12 * var(--u));
+      }
+
+      .statement-section {
+        padding: calc(80 * var(--u)) calc(20 * var(--u)) calc(90 * var(--u)) calc(20 * var(--u));
+      }
+
+      .statement-paragraph {
+        font-size: calc(28 * var(--u));
+        line-height: 1.35;
+        margin-bottom: calc(50 * var(--u));
+      }
+
+      .statement-subline {
+        font-size: calc(16 * var(--u));
+      }
+
+      .statement-subline em {
+        font-size: calc(14 * var(--u));
+      }
+
+      .trust-section {
+        padding: 0 calc(20 * var(--u)) calc(80 * var(--u)) calc(20 * var(--u));
+      }
+
+      .trust-panel {
+        grid-template-columns: 1fr;
+        padding: calc(28 * var(--u));
+        gap: calc(30 * var(--u));
+      }
+
+      .trust-title {
+        font-size: calc(34 * var(--u));
+      }
+
+      .glass-tile-asterisk {
+        left: auto;
+        right: 0;
+        top: 0;
+        width: calc(48 * var(--u));
+        height: calc(48 * var(--u));
+        font-size: calc(22 * var(--u));
+      }
+
+      .glass-tile-dots {
+        display: none;
+      }
+
+      .trust-cards-row {
+        flex-direction: column;
+      }
+
+      .trust-card-avatar, .trust-card-awards, .trust-card-portrait {
+        width: 100%;
+        height: auto;
+        min-height: calc(260 * var(--u));
+      }
+
+      .avatars-grid-8 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .avatar-item {
+        width: calc(40 * var(--u));
+        height: calc(40 * var(--u));
+      }
+
+      .dossier-section {
+        padding: 0 calc(20 * var(--u));
+      }
+
+      .dossier-card {
+        padding: calc(24 * var(--u));
+      }
+
+      .dossier-grid {
+        grid-template-columns: 1fr;
+        gap: calc(30 * var(--u));
+      }
+
+      .dossier-title-main {
+        font-size: calc(24 * var(--u));
+      }
+
+      .footer-bar {
+        padding: calc(30 * var(--u)) calc(20 * var(--u));
+        flex-direction: column;
+        gap: calc(16 * var(--u));
+        text-align: center;
+      }
+    }
+
+    /* ==========================================================================
+       ACCESSIBILITY & REDUCED MOTION
+       ========================================================================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .word {
+        color: var(--text-light) !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECTION 1: HERO (1440 × 938u)
+       Strict Monochrome Editorial Layout for Trần Ngọc Đạt
+       ========================================================================== -->
+  <header class="hero" id="top">
+    
+    <!-- Hero Photo: Asian Man Seen From Behind in Technical Jacket -->
+    <div class="hero-photo-wrap" id="heroPhotoWrap">
+      <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/7dc8b8f3-4ccb-4599-8ce4-7f7c7881bad9.webp" 
+           alt="Trần Ngọc Đạt - Head of Sales / Growth Director"
+           loading="eager">
+    </div>
+
+    <!-- Segmented Navigation Pill -->
+    <nav class="nav-pill-container" id="navPill">
+      <div class="nav-slider" id="navSlider"></div>
+      <a href="#top" class="nav-link active" data-index="0">Tổng quan</a>
+      <a href="#statement" class="nav-link" data-index="1">Triết lý</a>
+      <a href="#track-record" class="nav-link" data-index="2">Thành tựu (10X)</a>
+      <a href="#dossier" class="nav-link" data-index="3">Hồ sơ chi tiết</a>
+    </nav>
+
+    <!-- Top Right Meta & Contact Button -->
+    <div class="hero-top-right">
+      <div class="hero-meta-date">
+        <span>TRƯỞNG PHÒNG KINH DOANH</span>
+        1999 · Digital MKT & Thời Trang Nữ
+      </div>
+      <a href="mailto:trandatlcs@gmail.com" class="btn-contact-top" id="btnContactTop">
+        Liên Hệ ↗
+      </a>
+    </div>
+
+    <!-- Huge Editorial Display Title: SALES / SCALE ('99 · 10X) -->
+    <div class="hero-title-group">
+      <div class="hero-title-row">
+        <h1 class="hero-title-text" id="titleLine1"><span>SALES</span></h1>
+        <span class="hero-title-subscript">('99 · 10X)</span>
+      </div>
+      <div class="hero-title-row">
+        <div class="hero-title-text" id="titleLine2"><span>SCALE</span></div>
+      </div>
+    </div>
+
+    <!-- Bio / About Block (at y 458u) -->
+    <div class="hero-about-group">
+      <div class="hero-about-tag">Vị trí & Mục tiêu</div>
+      <p class="hero-about-desc">
+        7 năm kinh nghiệm kinh doanh thời trang nữ, 5 năm chuyên sâu Digital Advertising. Xây dựng chiến lược tăng trưởng, tối ưu chi phí quảng cáo và mở rộng hệ thống bán hàng đa kênh.
+      </p>
+      <a href="#dossier" class="btn-hero-action">
+        Xem Chi Tiết Hồ Sơ ↗
+      </a>
+    </div>
+
+    <!-- Stats Frame (at 57, 693u - 341 × 208u) -->
+    <div class="hero-stats-frame">
+      <!-- Dark Card: 150B+ & 6 Partner marks -->
+      <div class="stat-card-dark">
+        <div class="stat-card-dark-header">
+          <div class="num" id="heroCount1">150 TỶ+</div>
+          <div class="lbl">Doanh Thu Đỉnh Cao / Năm</div>
+        </div>
+
+        <div class="partner-marks-grid">
+          <div class="partner-mark-item">
+            <svg viewBox="0 0 24 24"><polygon points="12,2 22,22 2,22"/></svg>
+            DEZUS
+          </div>
+          <div class="partner-mark-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+            TikTok Shop
+          </div>
+          <div class="partner-mark-item">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+            Shopee Mall
+          </div>
+          <div class="partner-mark-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Facebook Ads
+          </div>
+          <div class="partner-mark-item">
+            <svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>
+            Omnichannel
+          </div>
+          <div class="partner-mark-item">
+            <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+            Store Retail
+          </div>
+        </div>
+
+        <a href="mailto:trandatlcs@gmail.com" class="btn-stat-call">
+          Gửi Email Hợp Tác ↗
+        </a>
+      </div>
+
+      <!-- Photo Card (Cap Photo) -->
+      <div class="stat-card-photo">
+        <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/a9d3641f-d629-46e5-8d2d-5f75386b803d.webp" alt="Thực chiến kinh doanh">
+        <div class="stat-card-photo-top">
+          <span>Thực Chiến · DEZUS</span>
+          <span>2021 – 2025</span>
+        </div>
+        <div class="stat-card-photo-bottom">
+          <div class="num" id="heroCount2">10X</div>
+          <div class="desc">Quy mô doanh thu bứt phá từ 15 tỷ lên 150 tỷ VNĐ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Brand Plate (Across Man's Back at 532, 444) -->
+    <div class="hero-brand-plate">
+      <div class="brand-plate-left">
+        <div class="brand-plate-mark">
+          <svg viewBox="0 0 28 28" width="24" height="24">
+            <polygon points="14,2 26,24 2,24" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+            <polygon points="14,10 20,22 8,22" fill="#ffffff"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-plate-name">TRẦN NGỌC ĐẠT</div>
+          <div class="brand-plate-sub">Trưởng Phòng Kinh Doanh · Fashion Retail</div>
+        </div>
+      </div>
+      <div class="brand-plate-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Logos row across jacket at y 864 -->
+    <div class="hero-jacket-logos">
+      <span>DEZUS FASHION</span>
+      <span>•</span>
+      <span>DIGITAL ADS</span>
+      <span>•</span>
+      <span>OMNICHANNEL</span>
+      <span>•</span>
+      <span>REVENUE SCALING</span>
+    </div>
+
+    <!-- Right Column Elements -->
+    <div class="hero-pill-growth">
+      <div class="pill-check-disc">✓</div>
+      <span>Tăng Trưởng Bền Vững</span>
+    </div>
+
+    <div class="hero-available-status">
+      Sẵn sàng cho vị trí
+      <span><i class="dot-live"></i> Quản Lý Cấp Cao</span>
+    </div>
+
+    <!-- Featured Campaign / Project Card on Right -->
+    <div class="hero-feature-card">
+      <div class="hero-feature-header">
+        <div>
+          <div class="feature-tagline">Dự án tiêu biểu</div>
+          <div class="feature-name">DEZUS Women's Fashion</div>
+        </div>
+        <div class="feature-badge-year">2021–2025</div>
+      </div>
+      
+      <div class="feature-image-box" onclick="document.querySelector('#dossier').scrollIntoView({behavior: 'smooth'})">
+        <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/9340eb08-877d-4d08-91fb-b70754541d98.webp" 
+             alt="DEZUS Fashion Campaign">
+        <div class="feature-arrow-btn">↗</div>
+        <div class="feature-progress-track">
+          <div class="feature-progress-fill"></div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 2: BLACK BAR (111u)
+       EST 2019 · SCROLL DOWN · REVENUE & SCALE
+       ========================================================================== -->
+  <section class="bar-divider">
+    <div class="bar-item-left">
+      EST 2019 <span>(7 NĂM KINH NGHIỆM)</span>
+    </div>
+
+    <div class="bar-item-center" onclick="document.querySelector('#statement').scrollIntoView({behavior: 'smooth'})">
+      SCROLL DOWN
+      <div class="bar-scroll-disc">↓</div>
+    </div>
+
+    <div class="bar-item-right">
+      15 TỶ → 150 TỶ VNĐ / NĂM
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: MANIFESTO / STATEMENT
+       Words dynamically illuminate from #6f6f6f to #f4f4f4 as user scrolls
+       ========================================================================== -->
+  <section class="statement-section" id="statement">
+    <div class="statement-container">
+      <div class="statement-quote-badge">TRIẾT LÝ KINH DOANH & TĂNG TRƯỞNG</div>
+      
+      <p class="statement-paragraph" id="manifestoText">
+        <!-- Javascript dynamically splits and wraps words for scroll lighting -->
+        Tôi tin rằng một thương hiệu thời trang vững mạnh không chỉ đến từ mẫu mã, mà từ chiến lược kinh doanh đa kênh sắc bén, tối ưu hoá chi phí Digital Marketing và năng lực mở rộng quy mô doanh thu gấp 10 lần một cách bền vững.
+      </p>
+
+      <div class="statement-subline">
+        Chiến lược thực chiến từ hoạch định tới thực thi.
+        <em>Tăng trưởng quy mô từ 15 tỷ lên 150 tỷ VNĐ/năm tại DEZUS Thời Trang Nữ.</em>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: TRUST PANEL / PROVEN TRACK RECORD (1302 × 429u)
+       Stat Cards with Avatars, Awards Laurel & Fashion Profile
+       ========================================================================== -->
+  <section class="trust-section" id="track-record">
+    <div class="trust-panel">
+      
+      <!-- Left Heading Block with Overlapping Glass Tiles -->
+      <div class="trust-left-column">
+        <div class="trust-heading-wrap">
+          <h2 class="trust-title">
+            Năng Lực<br>
+            Quản Trị &<br>
+            Tăng Trưởng<br>
+            Doanh Số
+          </h2>
+
+          <!-- Overlapping Frosted Glass Tile 1: Asterisk -->
+          <div class="glass-tile-asterisk">✱</div>
+
+          <!-- Overlapping Frosted Glass Tile 2: Four Dots -->
+          <div class="glass-tile-dots">
+            <div class="glass-dot"></div>
+            <div class="glass-dot"></div>
+            <div class="glass-dot"></div>
+            <div class="glass-dot"></div>
+          </div>
+        </div>
+
+        <p class="trust-desc">
+          Xây dựng chiến lược tăng trưởng, tối ưu chi phí quảng cáo Digital Ads, mở rộng thị trường và quản lý đội ngũ kinh doanh bán hàng đa kênh hiệu suất cao.
+        </p>
+      </div>
+
+      <!-- Right 3 Stat Cards Row -->
+      <div class="trust-cards-row">
+        
+        <!-- Card 1: Avatar Card (Light Grey #d6d6d6, 8 Round Avatars, 150B+) -->
+        <div class="trust-card-avatar">
+          <div class="avatars-grid-8">
+            <div class="avatar-item"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/300f41b1-3de5-4153-afde-06e15e753ad0.webp" alt="Avatar 1"></div>
+            <div class="avatar-item"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/bfff4cdf-4fda-4491-ada6-62f3b6236492.webp" alt="Avatar 2"></div>
+            <div class="avatar-item"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/943b121e-fe72-479f-93ae-aa8cd1650f69.webp" alt="Avatar 3"></div>
+            <div class="avatar-item"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/c673306f-2b81-4c3d-a7d2-3df61d481abb.webp" alt="Avatar 4"></div>
+            <div class="avatar-item"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/2e4fcf11-d0fc-4f31-8f7a-dfe751777141.webp" alt="Avatar 5"></div>
+            <div class="avatar-item"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/ab458fcd-4c2c-426f-8213-21cc3c7274be.webp" alt="Avatar 6"></div>
+            <div class="avatar-item"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/c1fcd833-5ac9-41e9-9352-fead7e64fa24.webp" alt="Avatar 7"></div>
+            <div class="avatar-item"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/4c2b3307-e555-4633-949c-efd3b7e09d82.webp" alt="Avatar 8"></div>
+          </div>
+
+          <div class="avatar-card-stat">
+            <div class="big-num counter" data-target="150" id="trustCount150">0</div>
+            <div class="stat-lbl">TỶ VNĐ / NĂM (DOANH THU ĐỈNH)</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Awards & Highlights Card (#262626, 10X Laurel Badge) -->
+        <div class="trust-card-awards">
+          <div class="awards-card-header">
+            <div>
+              <div class="awards-big-num counter" data-target="10" id="trustCount10">0</div>
+              <div class="awards-sub-lbl">LẦN TĂNG TRƯỞNG QUY MÔ</div>
+            </div>
+
+            <!-- Laurel Wreath SVG -->
+            <div class="laurel-badge-wrap">
+              <svg viewBox="0 0 44 44" width="36" height="36" fill="#d4af37">
+                <path d="M22 4c-1 3-3 6-6 7 3 2 6 6 6 11 0-5 3-9 6-11-3-1-5-4-6-7z"/>
+                <path d="M12 18c-3 2-6 1-8 0 1 3 3 5 6 6-1-2-1-4 2-6zM32 18c3 2 6 1 8 0-1 3-3 5-6 6 1-2 1-4-2-6z"/>
+                <path d="M14 28c-3 3-6 2-8 1 2 3 4 5 7 5 0-2 0-4 1-6zM30 28c3 3 6 2 8 1-2 3-4 5-7 5 0-2 0-4-1-6z"/>
+              </svg>
+              <div class="laurel-text">
+                TOP GROWTH<br>2021–2025
+              </div>
+            </div>
+          </div>
+
+          <div class="awards-card-footer">
+            Quản trị & phát triển hệ thống kinh doanh đa kênh: Sàn TMĐT, Social Commerce, Performance Ads & Retail Stores.
+          </div>
+        </div>
+
+        <!-- Card 3: Portrait Card (Monochrome Female Fashion Profile) -->
+        <div class="trust-card-portrait">
+          <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/addecc7d-666f-4342-8290-ed7f7cbbffd6.webp" 
+               alt="Thời trang nữ - Women's Fashion">
+          <div class="portrait-badge">Thời Trang Nữ</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: DETAILED DOSSIER / HỒ SƠ CHI TIẾT
+       Full Breakdown: 5 Năng Lực, Kinh Nghiệm DEZUS, Định Hướng Nghề Nghiệp
+       ========================================================================== -->
+  <section class="dossier-section" id="dossier">
+    <div class="dossier-card">
+      <div class="dossier-header">
+        <div>
+          <h2 class="dossier-title-main">Hồ Sơ Năng Lực Chi Tiết</h2>
+          <p class="dossier-subtitle">Trần Ngọc Đạt · Trưởng Phòng Kinh Doanh | Digital Marketing | Fashion Retail</p>
+        </div>
+        <div>
+          <button class="btn-footer-pill" onclick="copyEmail()">
+            <span>📋 Sao Chép Email</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="dossier-grid">
+        
+        <!-- Left: Work Experience -->
+        <div>
+          <div class="dossier-col-title">Kinh Nghiệm Làm Việc</div>
+          
+          <div class="experience-card-item">
+            <div class="exp-role-title">TRƯỞNG PHÒNG KINH DOANH</div>
+            <div class="exp-company-time">
+              <span>DEZUS (Thời Trang Nữ)</span>
+              <span>2021 – 2025 (4 NĂM)</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Xây dựng và triển khai toàn diện chiến lược kinh doanh ngành thời trang nữ.</li>
+              <li>Quản lý hoạt động kinh doanh, phát triển doanh thu và mở rộng thị trường mục tiêu.</li>
+              <li>Phối hợp cùng đội ngũ Digital Marketing nhằm tối ưu chi phí quảng cáo (CPA/ROAS) và nâng cao hiệu quả bán hàng.</li>
+              <li>Phát triển, vận hành và tối ưu hoá hệ thống kinh doanh đa kênh (Omnichannel: E-commerce, Social Commerce & Offline).</li>
+              <li><strong>Thành tựu cốt lõi:</strong> Tăng trưởng doanh thu từ <strong>15 tỷ lên 150 tỷ VNĐ/năm</strong>, tương đương quy mô gấp <strong>10 lần</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="career-vision-box">
+            <div class="vision-title">Định Hướng Nghề Nghiệp</div>
+            <p class="vision-desc">
+              Phát triển ở các vị trí quản lý kinh doanh cấp cao (Head of Sales / Business Director / Chief Commercial Officer), tập trung vào chiến lược tăng trưởng doanh thu, phát triển thương hiệu và mở rộng quy mô kinh doanh bài bản trong ngành thời trang.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: 5 Core Competencies -->
+        <div>
+          <div class="dossier-col-title">5 Năng Lực Chuyên Môn Cốt Lõi</div>
+          
+          <div class="skills-badges-wrap">
+            <div class="skill-badge-row">
+              <div>
+                <div class="skill-name">Business Strategy & Revenue Growth</div>
+                <div style="font-size: calc(12 * var(--u)); color: #aaa; margin-top: 3px;">Hoạch định chiến lược kinh doanh & nhân rộng quy mô doanh số</div>
+              </div>
+              <span class="skill-tag">Chiến Lược</span>
+            </div>
+
+            <div class="skill-badge-row">
+              <div>
+                <div class="skill-name">Digital Advertising & Performance Marketing</div>
+                <div style="font-size: calc(12 * var(--u)); color: #aaa; margin-top: 3px;">Tối ưu chi phí quảng cáo, chuyển đổi đa kênh (FB/TikTok/Google)</div>
+              </div>
+              <span class="skill-tag">Performance</span>
+            </div>
+
+            <div class="skill-badge-row">
+              <div>
+                <div class="skill-name">Sales Management & Team Leadership</div>
+                <div style="font-size: calc(12 * var(--u)); color: #aaa; margin-top: 3px;">Đào tạo, dẫn dắt và thiết lập KPI cho đội ngũ kinh doanh</div>
+              </div>
+              <span class="skill-tag">Quản Trị</span>
+            </div>
+
+            <div class="skill-badge-row">
+              <div>
+                <div class="skill-name">E-commerce & Omnichannel Retail</div>
+                <div style="font-size: calc(12 * var(--u)); color: #aaa; margin-top: 3px;">Vận hành hệ thống bán hàng đa nền tảng thời trang nữ</div>
+              </div>
+              <span class="skill-tag">Đa Kênh</span>
+            </div>
+
+            <div class="skill-badge-row">
+              <div>
+                <div class="skill-name">Business Analysis & Performance Optimization</div>
+                <div style="font-size: calc(12 * var(--u)); color: #aaa; margin-top: 3px;">Phân tích chỉ số tài chính, biên lợi nhuận & tối ưu chuỗi giá trị</div>
+              </div>
+              <span class="skill-tag">Dữ Liệu</span>
+            </div>
+          </div>
+
+          <div style="margin-top: calc(28 * var(--u)); padding: calc(18 * var(--u)); background: rgba(255,255,255,0.03); border-radius: calc(8 * var(--u)); border: 1px solid rgba(255,255,255,0.08);">
+            <div style="font-size: calc(12 * var(--u)); color: #888; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Thông Tin Liên Hệ Trực Tiếp</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <div style="font-size: calc(16 * var(--u)); font-weight: 600; color: #fff;">trandatlcs@gmail.com</div>
+                <div style="font-size: calc(12.5 * var(--u)); color: #aaa;">Năm sinh: 1999 · Hà Nội / Hồ Chí Minh</div>
+              </div>
+              <a href="mailto:trandatlcs@gmail.com" class="btn-hero-action" style="height: calc(38 * var(--u)); font-size: calc(12 * var(--u));">
+                Gửi Mail Trực Tiếp ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer-bar">
+    <div>
+      © 2026 TRẦN NGỌC ĐẠT — All rights reserved. Portfolio thiết kế phong cách Monochrome Editorial.
+    </div>
+
+    <div class="footer-contact-actions">
+      <a href="mailto:trandatlcs@gmail.com" class="btn-footer-pill">
+        trandatlcs@gmail.com ↗
+      </a>
+      <button class="btn-footer-pill" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        Lên Đầu Trang ↑
+      </button>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg">
+    ✓ Đã sao chép email: trandatlcs@gmail.com
+  </div>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT: MOTION & INTERACTION
+       - Web Animations on load
+       - Smooth sliding pill navigation
+       - Parallax photo drift
+       - Word-by-word scroll-driven text lighting
+       - Count-up statistics observer
+       - ?rec=1 timeline mode support
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Sliding Navigation Pill
+      const navPill = document.getElementById('navPill');
+      const navSlider = document.getElementById('navSlider');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      function updateSlider(element) {
+        if (!element || !navSlider) return;
+        const left = element.offsetLeft;
+        const width = element.offsetWidth;
+        navSlider.style.left = `${left}px`;
+        navSlider.style.width = `${width}px`;
+      }
+
+      // Initialize on first link
+      if (navLinks.length > 0) {
+        updateSlider(navLinks[0]);
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener('mouseenter', () => {
+          navLinks.forEach(l => l.classList.remove('hovered'));
+          link.classList.add('hovered');
+          updateSlider(link);
+        });
+
+        link.addEventListener('click', (e) => {
+          navLinks.forEach(l => {
+            l.classList.remove('active');
+            l.classList.remove('hovered');
+          });
+          link.classList.add('active');
+          updateSlider(link);
+        });
+      });
+
+      navPill.addEventListener('mouseleave', () => {
+        const activeLink = document.querySelector('.nav-link.active') || navLinks[0];
+        navLinks.forEach(l => l.classList.remove('hovered'));
+        updateSlider(activeLink);
+      });
+
+      // 2. Prepare Manifesto Words for Scroll-driven Lighting
+      const manifestoParagraph = document.getElementById('manifestoText');
+      if (manifestoParagraph) {
+        const rawText = manifestoParagraph.textContent.trim();
+        const words = rawText.split(/\s+/);
+        manifestoParagraph.innerHTML = words.map(w => `<span class="word">${w} </span>`).join('');
+      }
+
+      const wordSpans = document.querySelectorAll('.word');
+
+      // 3. Scroll Handling: Word Lighting & Photo Parallax
+      const heroPhotoWrap = document.getElementById('heroPhotoWrap');
+      const statementSection = document.getElementById('statement');
+
+      function onScroll() {
+        const scrollY = window.scrollY;
+
+        // A. Hero Photo Drift (0.12x scroll)
+        if (heroPhotoWrap && scrollY < window.innerHeight * 1.5) {
+          heroPhotoWrap.style.transform = `translateY(${scrollY * 0.12}px)`;
+        }
+
+        // B. Word-by-word lighting in statement section
+        if (statementSection && wordSpans.length > 0) {
+          const rect = statementSection.getBoundingClientRect();
+          const winHeight = window.innerHeight;
+
+          // Compute progress: starts when section enters mid-viewport, completes before it leaves
+          const start = winHeight * 0.85;
+          const end = winHeight * 0.2;
+          const totalDistance = start - end;
+          const currentProgress = (start - rect.top) / totalDistance;
+          const clamped = Math.max(0, Math.min(1, currentProgress));
+
+          const totalWords = wordSpans.length;
+          const activeIndex = clamped * (totalWords + 3);
+
+          wordSpans.forEach((span, idx) => {
+            const diff = activeIndex - idx;
+            if (diff >= 3) {
+              span.style.color = '#f4f4f4';
+            } else if (diff > 0) {
+              // 3-word soft edge interpolation
+              const ratio = diff / 3;
+              span.style.color = interpolateColor('#6f6f6f', '#f4f4f4', ratio);
+            } else {
+              span.style.color = '#6f6f6f';
+            }
+          });
+        }
+      }
+
+      function interpolateColor(color1, color2, factor) {
+        // Simple RGB interpolation between #6f6f6f (111,111,111) and #f4f4f4 (244,244,244)
+        const c1 = 111, c2 = 244;
+        const val = Math.round(c1 + factor * (c2 - c1));
+        return `rgb(${val}, ${val}, ${val})`;
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll(); // initial invocation
+
+      // 4. Number Counter Observer
+      let countersDone = false;
+      function animateCounters() {
+        if (countersDone) return;
+        countersDone = true;
+
+        const count150 = document.getElementById('trustCount150');
+        const count10 = document.getElementById('trustCount10');
+
+        if (count150) countUp(count150, 0, 150, 1400);
+        if (count10) countUp(count10, 0, 10, 1200);
+      }
+
+      function countUp(el, start, end, duration) {
+        const startTime = performance.now();
+        function update(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease out expo
+          const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+          const current = Math.floor(start + (end - start) * ease);
+          el.textContent = current + (el.id === 'trustCount10' ? 'X+' : '+');
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            el.textContent = end + (el.id === 'trustCount10' ? 'X+' : '+');
+          }
+        }
+        requestAnimationFrame(update);
+      }
+
+      // Intersection Observer for Trust Panel
+      const trustSection = document.getElementById('track-record');
+      if (trustSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounters();
+            }
+          });
+        }, { threshold: 0.25 });
+        observer.observe(trustSection);
+      } else {
+        animateCounters();
+      }
+
+      // 5. Recorder (?rec=1) Mode Support for Video / Demo Capture
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('rec') === '1') {
+        // Run statement fill: 1.3 - 4.2s
+        const totalWords = wordSpans.length;
+        const startTime = performance.now() + 1300;
+        const duration = 2900;
+
+        function runRecTimeline(now) {
+          if (now >= startTime) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const activeIndex = progress * (totalWords + 3);
+            wordSpans.forEach((span, idx) => {
+              const diff = activeIndex - idx;
+              if (diff >= 3) {
+                span.style.color = '#f4f4f4';
+              } else if (diff > 0) {
+                span.style.color = interpolateColor('#6f6f6f', '#f4f4f4', diff / 3);
+              } else {
+                span.style.color = '#6f6f6f';
+              }
+            });
+          }
+
+          if (now >= performance.now() + 3500) {
+            animateCounters();
+          }
+
+          if (heroPhotoWrap) {
+            const slowOffset = (now / 1000) * 12;
+            heroPhotoWrap.style.transform = `translateY(${slowOffset}px)`;
+          }
+
+          requestAnimationFrame(runRecTimeline);
+        }
+        requestAnimationFrame(runRecTimeline);
+      }
+
+      // 6. Initial Load Animations
+      const titleLine1 = document.querySelector('#titleLine1 span');
+      const titleLine2 = document.querySelector('#titleLine2 span');
+      if (titleLine1 && titleLine2) {
+        titleLine1.style.transform = 'translateY(100%)';
+        titleLine2.style.transform = 'translateY(100%)';
+        setTimeout(() => {
+          titleLine1.style.transform = 'translateY(0)';
+        }, 100);
+        setTimeout(() => {
+          titleLine2.style.transform = 'translateY(0)';
+        }, 220);
+      }
+    });
+
+    // Copy Email Function
+    function copyEmail() {
+      const email = 'trandatlcs@gmail.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast();
+        }).catch(() => {
+          fallbackCopy(email);
+        });
+      } else {
+        fallbackCopy(email);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const tempInput = document.createElement('input');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      showToast();
+    }
+
+    function showToast() {
+      const toast = document.getElementById('toastMsg');
+      if (!toast) return;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+  </script>
+</body>
+</html>
